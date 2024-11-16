@@ -5,10 +5,10 @@ library(ggplot2)
 library(plotMA)
 library(dplyr)
 
-count_data_2001 <- read.csv("C:/Users/Aman yadav/Downloads/RNA_Seq/H0351.2001/RNAseqCounts.csv", header = TRUE, row.names = 1)
-count_data_2002 <- read.csv("C:/Users/Aman yadav/Downloads/RNA_Seq/H0351.2002/RNAseqCounts.csv", header = TRUE, row.names = 1)
-metadata_2001 <- read.csv("C:/Users/Aman yadav/Downloads/RNA_Seq/H0351.2001/SampleAnnot.csv", header = TRUE)
-metadata_2002 <- read.csv("C:/Users/Aman yadav/Downloads/RNA_Seq/H0351.2002/SampleAnnot.csv", header = TRUE)
+count_data_2001 <- read.csv("H0351.2001/RNAseqCounts.csv", header = TRUE, row.names = 1)
+count_data_2002 <- read.csv("H0351.2002/RNAseqCounts.csv", header = TRUE, row.names = 1)
+metadata_2001 <- read.csv("H0351.2001/SampleAnnot.csv", header = TRUE)
+metadata_2002 <- read.csv("H0351.2002/SampleAnnot.csv", header = TRUE)
 dds_2001 <- DESeqDataSetFromMatrix(countData = count_data_2001,
 colData = metadata_2001,
 design = ~ RNAseq_sample_name)
